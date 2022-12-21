@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react'
 import { Link,Navigate } from 'react-router-dom'
 import axios from 'axios'
 import Header from "./Header"
+import './bg.css'
+import background from "./bg.jpg";
 
 const Dashboard = () => {
     const [search,setSearch] = useState(null);
@@ -29,7 +31,7 @@ const Dashboard = () => {
     
     
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${background})`}}>
             <Header />
             
             <section className="container">

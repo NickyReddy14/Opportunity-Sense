@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <nav className="navbar bg-dark justify-content-center" style={{backgroundColor:"grey"}}>
 
-            
+<img src={require('./vjitlogo.png')} height="75px" width="auto"/>
             <li className="nav-link ">
                 <NavLink to="/dashboard" className="nav-link" style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}>
                     Companies Hub
@@ -22,17 +22,18 @@ const Header = () => {
                     Qualified Company
                 </NavLink>
             </li>
+            <li className = "nav-link">
+                <NavLink to="/MyProfile" className="nav-link" style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}>
+                    My Profile
+                </NavLink>
+            </li>
             <li className="nav-link">
                 <NavLink to="/login" className="nav-link" onClick={()=>localStorage.clear()} style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}>
                     Logout
                 </NavLink>
             </li>
            
-            <li className = "nav-link">
-                <NavLink to="/MyProfile" className="nav-link" style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}>
-                    My Profile
-                </NavLink>
-            </li>
+            
         </nav>
     )
 }

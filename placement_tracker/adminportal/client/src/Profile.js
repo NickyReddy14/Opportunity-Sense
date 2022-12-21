@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react'
 import { Navigate,useParams } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
+import './bg.css';
+import background from "./bg.jpg";
 
 const Indprofile = () => {
     const {id}=  useParams()
@@ -37,11 +39,11 @@ const Indprofile = () => {
 
  
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${background})`}}>
              <Header />
              { iprofile && <div>
             
-            <div className="profile bg-light card " style={{"margin":"10px"}}>
+            
                 <center>
                         <img 
                             className="round-img"
@@ -50,7 +52,7 @@ const Indprofile = () => {
                             alt="pix"
                         />
                         <div>
-                            <h2 style={{"color":"springgreen"}}>{iprofile.compname}</h2>
+                            <h2>{iprofile.compname}</h2>
                             <p><b>Company Mail: </b>{iprofile.email}</p>
                             <p><b>Company Description: </b>{iprofile.description}</p>
                             <p><b>Eligibility: </b>{iprofile.eligibility}</p>
@@ -98,7 +100,7 @@ const Indprofile = () => {
                         }
                 </center>
                 
-            </div>
+            
             
 
 </div>}

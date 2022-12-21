@@ -3,6 +3,7 @@ import { Link,Navigate } from 'react-router-dom'
 import axios from 'axios'
 import './App.css'
 import Header from './Header'
+import "./bgstatic.css";
 
 const Addcomp = () => {
     const [data,seData] = useState({
@@ -44,7 +45,7 @@ const Addcomp = () => {
     }
 
     return (
-        <div>
+        <div className='back'>
             <Header />
 
             <section className="container">

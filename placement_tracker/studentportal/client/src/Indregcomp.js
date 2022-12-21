@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { Navigate,useParams } from 'react-router-dom';
 import axios from 'axios';
 import Header from './Header';
+import './bgstatic.css'
 
 const Indregcomp = () => {
     const {id}=  useParams()
@@ -48,7 +49,7 @@ const Indregcomp = () => {
 
  
     return (
-        <div>
+        <div className='back'>
              <Header />
              { iprofile && <div>
             

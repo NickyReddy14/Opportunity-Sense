@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { Link,Navigate } from 'react-router-dom'
 import axios from 'axios'
 import './App.css'
+import './bgstatic.css'
 
 const Register = () => {
     const [data,seData] = useState({
@@ -291,7 +292,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className='back'>
             <nav className="navbar bg-dark justify-content-left">
             <h1 id="header">
                 <h1>VJITian's Hub</h1>

@@ -2,33 +2,20 @@ import React,{useState,useEffect} from 'react'
 import { Link,Navigate } from 'react-router-dom'
 import axios from 'axios'
 import Header from "./Header"
+import './bgstatic.css'
 
 const Dashboard = () => {
     const [search,setSearch] = useState(null);
     const [data,setData] = useState ([]);
     const [tokenn,setTokenn] = useState(localStorage.getItem('token'))
-    // useEffect(()=>{
-    //     axios.get('http://localhost:5000/allprofiles',{
-    //             headers : {
-    //                 'x-token' : localStorage.getItem('token')
-    //             }
-    //         }).then(res => 
-    //             !search ? setData(res.data) : setData(res.data.filter(profile => profile.collegeId.includes(search.toUpperCase()) | profile.email.toLowerCase().includes(search.toLowerCase()) | profile.skill.toLowerCase().includes(search.toLowerCase()) | profile.branch.includes(search.toUpperCase()))))
-
-        
-    // },[search])
+    
     if(!localStorage.getItem('token')){
         return <Navigate to='/login' />
     }
     console.log(tokenn)
-
-
-
-   
-    
     
     return (
-        <div>
+        <div className='back'>
             <Header />
             
             <section className="container">
@@ -38,17 +25,11 @@ const Dashboard = () => {
             <nav className="navbar navbar-light">
                 <div className="container-fluid">
                     <h3 className="navbar-brand">Browse and Analys companies <span style={{color:"blue"}}> 🤝 </span></h3>
-
-                    {/* <form className="d-flex" onSubmit={searchHandler} >
-                        <input className="form-control me-2" type="text" onChange={(e) => setSearch(e.target.value)} placeholder="clgId /email /skill /branch" aria-label="Search" />
-                        <input className="btn btn-outline-success" type="submit" value="search" />
-                    </form> */}
                     
                 </div>
             </nav>
 
-
-                <div className="profiles ">
+            <div className="profiles ">
                 <div className = "row" >
                     {data.length>=1 ? 
                     data.map(profile => 

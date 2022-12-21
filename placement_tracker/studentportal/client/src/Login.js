@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import { Link,Navigate } from 'react-router-dom'
 import axios from 'axios'
 import './Login.css'
+import './bgstatic.css'
+
 const Login = () => {
     const [auth,setAuth] = useState(false)
     const [data,seData] = useState({
@@ -29,7 +31,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className='back'>
             
         <nav className="navbar bg-dark justify-content-left">
             

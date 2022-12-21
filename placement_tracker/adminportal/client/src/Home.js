@@ -1,16 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './vjitlogo.png'
+import './bgstatic.css'
 
 const Home = () => {
     return (
-        <div>
+        <div className='back'>
             <center>
-
-                {/* <Logo /> */}
-                
-               
-                <section  style={{"marginTop":"170px"}}>
-                    
+                <section>
+                <img src={require('./vjitlogo.png')} height="300px" width="auto"/>    
                         <h1 >VJIT Placement Portal</h1>
                         <p >
                             Create a student profile and find your position in companies!

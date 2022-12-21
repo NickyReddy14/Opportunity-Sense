@@ -3,6 +3,7 @@ import { Link,Navigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import Header from "./Header"
 import './MyProfile.css'
+import './bgstatic.css'
 
 export const MyProfile = () =>{
 
@@ -22,7 +23,7 @@ export const MyProfile = () =>{
     console.log(tokenn)
 
 return(
-    <div>       
+    <div className='back'>       
         <Header/>
         <div className='myprof_container'>
             <h1>My Profile</h1>

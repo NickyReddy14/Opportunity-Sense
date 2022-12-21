@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import { Link,Navigate } from 'react-router-dom'
 import axios from 'axios'
+import './bgstatic.css'
+import './vjitlogo.png'
 
 const Login = () => {
     const [auth,setAuth] = useState(false)
@@ -28,9 +30,9 @@ const Login = () => {
     }
 
     return (
-        <div>
-            
-        <nav className="navbar bg-dark justify-content-left">
+        <div className='back'>
+            <center><a href="/Home"><img src={require('./vjitlogo.png')} height="100px" width="auto"/></a></center>
+        {/* <nav className="navbar bg-dark justify-content-left">
             <h2 style={{"marginLeft":"15px"}}>
                 <Link to='/'>Placement Portal</Link>
             </h2>
@@ -41,7 +43,7 @@ const Login = () => {
                 </h5>
             </div>
             
-        </nav>
+        </nav> */}
             
             <section className="container">
                 <h1 className="large " style={{"color":"orange","marginTop":"100px"}} >Admin Sign In</h1>

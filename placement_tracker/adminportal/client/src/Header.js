@@ -1,12 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './vjitlogo.png'
 
 
 const Header = () => {
     return (
-        <nav className="navbar bg-dark justify-content-center" style={{backgroundColor:"grey"}}>
-
-            
+        
+        <nav className="navbar bg-dark justify-content-centre" style={{backgroundColor:"grey"}}>
+            <img src={require('./vjitlogo.png')} height="75px" width="auto"/>
             <li className="nav-link ">
                 <NavLink to="/dashboard" className="nav-link" style={({ isActive }) => ({ color: isActive ? 'orange' : 'white' })}>
                     All Companies
@@ -25,6 +26,7 @@ const Header = () => {
            
 
         </nav>
+        
     )
 }
 

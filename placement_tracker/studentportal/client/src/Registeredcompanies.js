@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { Link,Navigate } from 'react-router-dom'
 import axios from 'axios'
 import Header from "./Header"
+import './bgstatic.css'
 
 const Registeredcompanies = () => {
     const [search,setSearch] = useState(null);
@@ -33,7 +34,7 @@ const Registeredcompanies = () => {
     
     
     return (
-        <div>
+        <div className='back'>
             <Header />
             
             <section className="container">
