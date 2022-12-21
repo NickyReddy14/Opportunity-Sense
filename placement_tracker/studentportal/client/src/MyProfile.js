@@ -25,11 +25,28 @@ export const MyProfile = () =>{
 return(
     <div className='back'>       
         <Header/>
+        <center>
+        <div className="profile bg-light card " style={{"margin":"100px","width": "25.5rem"}}>
+                            <img 
+                                className="round-img"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/800px-User-avatar.svg.png"
+                                height="300" width="auto"
+                                alt="user photo"
+                            />
         <div className='myprof_container'>
-            <h1>My Profile</h1>
-            <p>Name: {data.fullname}<br/>College ID: {data.collegeId}<br/>Email ID: {data.email}<br/>Branch: {data.branch}<br/>Mobile Number: {data.mobile}<br/>Github Handle: {data.github}<br/>LinkedIn Handle: {data.linkedin}<br/>Password: {data.password}<br/>CGPA: {data.cgpa}</p>   
+               <h2>{data.fullname}</h2>
+                                    <p>College ID {data.collegeId}</p>
+                                    <p>Email ID: {data.email} CGPA</p>
+                                    <p>Branch: {data.branch}</p>
+                                    <p>Mobile Number: {data.mobile}</p>
+                                    <p>Github Handle: {data.github}</p>
+                                    <p>LinkedIn Handle: {data.linkedin}</p>
+                                    <p>Password: {data.password}</p>
+                                    <p>CGPA: {data.cgpa}</p>
+                            </div>
         </div>
-    </div>
+        </center>
+        </div>
 )
 }
 
